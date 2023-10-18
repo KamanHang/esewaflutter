@@ -1,41 +1,25 @@
-import 'package:dateandtime/function/esewa.dart';
+import 'package:dateandtime/KhaltiPayment.dart';
 import 'package:flutter/material.dart';
+import 'package:khalti_flutter/khalti_flutter.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: MyApp(),
-  ));
+  runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        title: Text('Esewa Payment API testing'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            ElevatedButton(
-              style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.green)),
-              onPressed: () {
-              Esewa esewa = Esewa();
-              esewa.pay();
-            }, child: Text('Pay by eSewa')
-            
-            )
-            
-          ],
-        ),
-      ),
-    );
+    return KhaltiScope(
+        publicKey: 'test_public_key_dc006e10a4204acd8cad6e95f1f26edf',
+        enabledDebugging: true,
+        builder: (context, navKey) {
+          return MaterialApp(
+            home: HomePage(),
+            navigatorKey: navKey,
+            localizationsDelegates: const [KhaltiLocalizations.delegate],
+          );
+        });
   }
 }

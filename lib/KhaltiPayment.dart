@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.green,
         centerTitle: true,
-        title: Text('Esewa Payment API testing'),
+        title: Text('Esewa Khalti Payment SDK testing'),
       ),
       body: Center(
         child: Column(

@@ -2,7 +2,7 @@
         package="com.example.dateandtime" >
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="dateandtime"
+        android:label="esewakhaltiflutter"
         android:name="${applicationName}"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:icon="@mipmap/ic_launcher">
